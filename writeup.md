@@ -210,7 +210,7 @@ int main() {
         current = current->next;
     }
 
-    printf("\n\t💀 Winner: Player %d 💀\n", start->data);
+    printf("\n\t Winner: Player %d \n", start->data);
 
     // Free the last remaining node
     free(start);
