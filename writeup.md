@@ -62,6 +62,7 @@ Name was `.hidden`
 ```bash
 cat .hidden
 ```
+Password obtained: `2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ`
 
 ---
 
@@ -72,6 +73,7 @@ Commands used:
 find . -type f -size 1033c ! -executable
 cat ./maybehere07/.file2
 ```
+Password obtained: `4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw`
 
 ---
 
@@ -83,23 +85,30 @@ find / -user bandit7 -group bandit6 -size 33c
 ```
 It showed permission denied in many places but still gave the file location:  
 `/home/bandit5/inhere/maybehere07/.file2`
+Password obtained: `HWasnPhtq9AVKe0dmk45nxy20cvUa6EG`
 
 ---
 
 ## Level 6 to 7  
 I had to find a file with a specific name using the `find` command  
-I learned about `-name`, `-size`, `-user`, `-group`, `-executable`, etc.  
-Got the password from the file found
+I learned about `-name`, `-size`, `-user`, `-group`, `-executable`, etc.
+Used cd / to go to root
+Command:
+```bash
+find -type f -size 33c -user bandit7 -group bandit6
+```
+Password obtained: `morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj`
 
 ---
 
 ## Level 7 to 8  
 Used `grep` command to filter lines from a file that had a certain string  
 Learnt how to use `grep` efficiently  
-Example:  
+Command:  
 ```bash
-grep millionth data.txt
+grep "millionth" data.txt
 ```
+Password obtained: `dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
 
 ---
 
