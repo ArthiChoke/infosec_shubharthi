@@ -85,4 +85,97 @@
 
 ---
 
+# picoCTF
+
+## Challenge 1 - Information
+
+- Downloaded `cat.jpg`  
+- Ran:
+  ```bash
+  strings cat.jpg | less
+  ```
+- Found base64-looking strings  
+- Decoded using:
+  ```bash
+  echo 'base64_encoded_string' | base64 -d
+  ```
+- Flag: `picoCTF{the_m3tadata_1s_modified}`
+
+---
+
+## Challenge 2 - Matryoshka Dolls
+
+- Installed binwalk:
+  ```bash
+  sudo apt install binwalk
+  ```
+- Scanned image:
+  ```bash
+  binwalk dolls.jpg
+  ```
+- Found embedded files  
+- Extracted using:
+  ```bash
+  binwalk -e dolls.jpg
+  ```
+- Repeated the process for each extracted image  
+- Flag found after several layers
+
+---
+
+## Challenge 3 - tunn3l_v1s10n
+
+- File wouldn’t open—suspected broken header  
+- Identified file as BMP using hex signature (`BM`)  
+- Compared with a sample BMP file  
+- Repaired header manually  
+- Flag recovered after fixing BMP structure
+
+---
+
+## Challenge 4 - MacroHard WeakEdge
+
+- Ran:
+  ```bash
+  binwalk "Forensics is fun.pptm"
+  ```
+- Found embedded zip files  
+- Extracted using:
+  ```bash
+  binwalk -e "Forensics is fun.pptm"
+  ```
+- Found `vbaProject.bin` and `hidden`  
+- Inspected `hidden`, found base64-encoded data  
+- Decoded it and found:  
+  Flag inside the decoded content
+
+---
+
+## Challenge 5 - Enhance!
+
+- Given file: `.svg`  
+- Installed Inkscape:
+  ```bash
+  sudo apt install inkscape
+  inkscape file.svg
+  ```
+- Tweaked object layers in Inkscape  
+- Found white-colored, tiny flag text  
+- Flag revealed visually
+
+---
+
+## Challenge 10 - Extensions
+
+- Checked file type:
+  ```bash
+  file flag.txt
+  ```
+- It was a PNG image  
+- Opened with:
+  ```bash
+  display flag.txt
+  ```
+- Flag was visible in the image
+
 
