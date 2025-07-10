@@ -1,3 +1,109 @@
+#CHALLENGE 1
+
+##part_1
+
+1.For binary part, used pythoncode:
+
+```python
+binary = "01101000 01101001"
+binary_list = binary.split()
+print(binary_list)
+for b in binary_list:
+    number = int(b, 2)
+    letter = chr(number)
+    print(letter)
+message = ''.join([chr(int(b, 2)) for b in binary_list])
+```
+
+So the message we got is “hi”
+
+2.Second part consisted of numbers from 0-7, so it is octal
+
+Used pythoncode:
+
+```python
+octal_str = "173 61 144 63 156 67 61 146 171"
+tokens = octal_str.split()
+chars = []
+for o in tokens:
+	temp = int(o, 8)
+	char = chr(temp)
+	chars.append(char)
+message = ''.join(chars)
+print(message)
+```
+
+The message we got is “{1d3n71fy”
+
+3.Third part looks like decimal values of ASCII characters
+
+Used pythoncode:
+
+```python
+decimal_str = "49 110 103 95 100 49 66 66 33 72 33"
+tokens = decimal_str.split()
+chars = []
+for d in tokens:
+    code = int(d, 10)
+    ch = chr(code)
+    chars.append(ch)
+message = ''.join(chars)
+print(message)
+```
+
+Message found = “1ng_d1BB!H!”
+
+4.Fourth part is hexdata
+
+Used pythoncode:
+
+```python
+hex_str = "6e 37 5f 33"
+tokens = hex_str.split()
+chars = []
+for h in tokens:
+    code = int(h, 16)
+    ch = chr(code)
+    chars.append(ch)
+message = ''.join(chars)
+print(message)
+```
+
+Message found = n7_3
+
+5.Fifth part is just base64 encoded data
+
+In terminal, used command:
+
+```bash
+echo bmMwZDFuZzV9 | base64 -d
+```
+
+Message found = “nc0d1ng5}”
+
+The final string is {1d3n71fy1ng_d1BB!H!n7_3nc0d1ng5}
+
+##part_2
+
+1.The source.enc file looked like base64 encoded data  
+2.After decoding it i found that it’s pythoncode which reads a file named flag.txt and writes the output in a file named output.txt  
+3.I copied the data from the output.txt file and pasted it into flag.txt using the command:  
+```bash
+echo -n 43104f0c32077b0230455f346e5e77285868722d345a643b6256350636027d77 > flag.txt
+```
+4.I saved the pythoncode in a file named decoded.py and ran the command:
+```bash
+python3 decoded.py
+```
+5.then i used:
+```bash
+cat output.txt
+```
+and found some hexdata  
+6.I decoded the hexdata using pyhtoncode and found the flag:  
+CO2{0_nwXr4db56}
+
+
 # CHALLENGE 2 - CRYPTOHACK
 
 ## GENERAL
