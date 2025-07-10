@@ -1,6 +1,6 @@
-#CHALLENGE 1
+# CHALLENGE 1
 
-##part_1
+## part_1
 
 1.For binary part, used pythoncode:
 
@@ -83,7 +83,7 @@ Message found = “nc0d1ng5}”
 
 The final string is {1d3n71fy1ng_d1BB!H!n7_3nc0d1ng5}
 
-##part_2
+## part_2
 
 1.The source.enc file looked like base64 encoded data  
 2.After decoding it i found that it’s pythoncode which reads a file named flag.txt and writes the output in a file named output.txt  
