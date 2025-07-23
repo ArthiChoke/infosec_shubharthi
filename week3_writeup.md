@@ -4,18 +4,18 @@
 - Opened the login page in browser  
 - Entered `admin' --` in the username field and any password  
 - Submitted the form and bypassed login using SQL injection  
-- Flag: `picoCTF{y0u_t0o_c4n_bypass_thi5_7_1__bEc4u53_h4x0r_$_4r3nT_W3!!}`
+
 
 - ## Web Gauntlet 2
 - Tried previous injection got blocked  
 - Entered `admin' /*` to bypass the password check using block comment  
 - Submitted the form and bypassed login  
-- Flag: `picoCTF{9rryb0d1_l1k3s_7h3_m1cr0_**}`
+
 
 - ## Web Gauntlet 3
 - Used `admin';` in username to terminate query early  
-- Submitted the form and accessed admin account  
-- Flag: `picoCTF{p4r4m3tr1c_@ll_d@t@_l0v3rs}`
+- Submitted the form and accessed admin account
+- 
 
 - ## Irish-Name-Repo 1
 - Visited the challenge page  
