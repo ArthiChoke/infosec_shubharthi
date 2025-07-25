@@ -31,7 +31,7 @@
 
 - ## Irish-Name-Repo 3
 - Inspected hidden form field and changed value to 1  
-- Entered `' be 1=1--` based on Caesar shift decoding  
+- Entered `' be 1=1--` based on ROT 13 encryptiom
 - Submitted and accessed admin panel  
 - Flag: `picoCTF{3v3n_m0r3_SQL_d490b67d}`
 
